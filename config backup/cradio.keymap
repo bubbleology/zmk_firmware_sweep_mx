@@ -1,0 +1,85 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+
+&mt {
+  //  flavor = "tap-preferred";
+   // tapping_term_ms = <170>;
+};
+
+/ { 
+
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        
+         
+        
+
+        
+    };
+
+        keymap {
+                compatible = "zmk,keymap";
+                
+       		default_layer {
+		bindings = <
+		&kp Q      &kp W      &kp E       &kp R       &kp T             &kp Y      &kp U       &kp I       &kp O      &kp P 
+		&mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &mt RALT G        &mt RALT H &mt LSHFT J &mt LCTRL K &mt LALT L &mt LGUI QUOT
+		&kp Z      &kp X      &kp C       &kp V       &kp B             &kp N      &kp M       &kp CMMA    &kp DOT    &kp FSLH
+          	                                  &lt 2 TAB   &kp SPC           &lt 1 SPC  &lt 3 BSPC 
+		>;
+		};
+
+       		left_layer {
+		bindings = <
+		&kp LPAR    &kp N7    &kp N8    &kp N9    &kp RPAR              &kp ESC &kp F7 &kp F8 &kp F9  &kp F12 
+		&kp SEMI    &kp N4    &kp N5    &kp N6    &kp EQUAL             &kp ESC  &kp F4 &kp F5 &kp F6  &kp F11 
+		&kp GRAVE   &kp N1    &kp N2    &kp N3    &kp MINUS             &kp RET  &kp F1 &kp F2 &kp F3  &kp F10 
+		                                &kp N0    &kp DOT               &none    &kp DEL 
+		>;
+		};
+		
+		right_layer {
+		bindings = <
+		&bt BT_CLR    &none   &none  &kp N0      &kp ESC                      &none  &none     &kp UP    &none      &none 
+		&bt BT_SEL 2  &none   &none  &kp EQUAL   &kp ESC                       &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none
+		&bt BT_SEL 1  &none   &none  &kp MINUS   &kp RET                       &none  &kp HOME  &kp PG_DN &kp PG_UP  &kp END
+		                      &none       &kp BSLH                      &none  &none 
+		>;
+		};	
+		
+		tri_layer {
+		bindings = <
+		&none   &none   &none    &none      &bt BT_CLR                  &none   &none   &none    &none      &none
+		&none   &none   &none    &none      &bt BT_SEL 2                &none   &none   &none    &none      &none 
+		&none   &none   &none    &none      &bt BT_SEL 1                &none   &none   &none    &none      &none  
+				        &none      &none 			&none   &none 
+		>;
+		};	
+        
+	};
+};
+
+
+//  _____________________________       _____________________________
+// /  0  |  1  |  2  |  3  |  4  \     /   5 |   6 |   7 |   8 |  9  \
+// | 10  | 11  | 12  | 13  | 14  |     |  15 |  16 |  17 |  18 | 19  |
+// | 20  | 21  | 22  | 23  | 24  |     |  25 |  26 |  27 |  28 | 29  |
+//          \   30   |    31     /     \     32    |  33    /
+//           --------------------       ---------------------
+
+
+
+
