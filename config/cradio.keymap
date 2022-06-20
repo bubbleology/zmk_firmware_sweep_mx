@@ -118,7 +118,7 @@
 	.----------------------------------------------------------------------.
 	|  1  |  2  |  3  |  4  |  5  |          |  6  |  7  |  8  |  9  |  0  |
 	| TAB |  _  |  -  |  =  |  +  |          | [ ] |  @  | ' " |     | DEL |
-	| LGUI|  !  |  ?  | ; : |     |          |     |  /  | { } |     |     |
+	| LGUI|  !  |  ?  | ; : |     |          | { } |  /  |  |  |  \  |     |
 	'-----------------\     | SFT |          |TO_2 |     /-----------------'
 	                   '--------------------------------'
 
@@ -140,10 +140,10 @@
 
 4 = Comfort
 	.----------------------------------------------------------------------.
-	| ESC | ← ← |  ↑  | → → |COPY |     	 |  *  |  7  |  8  |  9  |  /  |
-	| TAB |  ←  |  ↓  |  →  |PASTE|     	 |  +  |  4  |  5  |  6  |BKSPC|
-	| SFT | DEL |BKSPC|     |HOME |          |  -  |  1  |  2  |  3  |TO_0 |
-	'-----------------\ LALT| SPC |          |  0  |  .  /-----------------'
+	| ESC | ← ← |  ↑  | → → |  ^  |     	 |  *  |  7  |  8  |  9  |  /  |
+	| TAB |  ←  |  ↓  |  →  |  <  |     	 |  +  |  4  |  5  |  6  |BKSPC|
+	| SFT | DEL |BKSPC|     |  >  |          |  -  |  1  |  2  |  3  |TO_0 |
+	'-----------------\ CTRL| SPC |          |  0  |  .  /-----------------'
 	                   '--------------------------------'
 */
 
@@ -165,7 +165,7 @@
             bindings = <
                 &kp N1     &kp N2     &kp N3      &kp N4          &kp N5        &kp N6           &kp N7         &kp N8        &kp N9     &kp N0
                 &kp TAB    &kp UNDER  &kp MINUS   &kp EQL         &kp LS(EQUAL) &mt RBKT LBKT    &kp AT         &mt DQT SQT   &none      &kp DEL
-                &kp LGUI   &kp EXCL   &kp QMARK   &mt COLON SEMI  &none         &none            &kp FSLH       &mt RBRC LBRC &none      &trans
+                &kp LGUI   &kp EXCL   &kp QMARK   &mt COLON SEMI  &none         &mt RBRC LBRC    &kp FSLH       &kp PIPE      &kp BSLH   &trans
                                                   &trans          &kp LSHIFT    &to NAV_L        &trans
             >;
         };
@@ -193,7 +193,7 @@
 	comfy_layer {
             label = "COMFY";
             bindings = <
-                &kp TILDE  &kp LC(LEFT) &kp UP      &kp LC(RIGHT) &kp CARET   	&kp KP_MULTIPLY &kp N7       &kp N8      &kp N9     &kp KP_DIVIDE 
+                &kp TILDE  &kp LC(LEFT) &kp UP      &kp LC(RIGHT) &kp CARET   	&kp KP_MULTIPLY &kp N7    &kp N8      &kp N9     &kp KP_DIVIDE 
                 &kp DEL    &kp LEFT     &kp DOWN    &kp RIGHT     &kp LESS_THAN &kp KP_PLUS  &kp N4       &kp N5      &kp N6     &kp BKSP
                 &kp LSHIFT &kp DEL      &kp BKSP    &none         &kp GREATER_THAN &kp KP_MINUS &kp N1    &kp N2      &kp N3     &to DEFAULT_L  
                                                     &kp LCTRL     &kp SPACE    	&kp N0       &kp DOT
