@@ -119,7 +119,7 @@
 	|  1  |  2  |  3  |  4  |  5  |          |  6  |  7  |  8  |  9  |  0  |
 	| TAB |  _  |  -  |  =  |  +  |          | [ ] |  @  | ' " |     | DEL |
 	| LGUI|  !  |  ?  | ; : |     |          | { } |  /  |  |  |  \  |     |
-	'-----------------\     | SFT |          |TO_2 |     /-----------------'
+	'-----------------\ LALT| SFT |          |TO_2 |     /-----------------'
 	                   '--------------------------------'
 
 2 = Navigation
@@ -166,7 +166,7 @@
                 &kp N1     &kp N2     &kp N3      &kp N4          &kp N5        &kp N6           &kp N7         &kp N8        &kp N9     &kp N0
                 &kp TAB    &kp UNDER  &kp MINUS   &kp EQL         &kp LS(EQUAL) &mt RBKT LBKT    &kp AT         &mt DQT SQT   &none      &kp DEL
                 &kp LGUI   &kp EXCL   &kp QMARK   &mt COLON SEMI  &none         &mt RBRC LBRC    &kp FSLH       &kp PIPE      &kp BSLH   &trans
-                                                  &trans          &kp LSHIFT    &to NAV_L        &trans
+                                                  &kp LALT        &kp LSHIFT    &to NAV_L        &trans
             >;
         };
 
