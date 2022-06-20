@@ -32,9 +32,9 @@
 	                   '--------------------------------'
 			
 	ESC 	= 0 | 1			LC(X)	= 7 | 8
-	TAB 	= 1 | 2 | 3		LC(C)	= 17 | 18
+	TAB 	= 11 | 12		LC(C)	= 17 | 18
 					LC(V)	= 27 | 28
-	ENTER 	= 11 | 12		SK(SFT) = 16 | 17
+	ENTER 	= 12 | 13		SK(SFT) = 16 | 17
 	LPAR 	= 13 | 14		RPAR 	= 15 | 16
 	TO_4	= 21 | 22
 	TO_0	= 22 | 23
@@ -51,13 +51,13 @@
 
 		combo_tab {
 			timeout-ms = <27>;
-			key-positions = <1 2 3>;
+			key-positions = <11 12>;
 			bindings = <&kp TAB>;
 		};
 
 		combo_enter {
 			timeout-ms = <27>;
-			key-positions = <11 12>;
+			key-positions = <12 13>;
 			bindings = <&kp ENTER>;
 		};
 		
@@ -154,7 +154,7 @@
             label = "Base";
             bindings = <
                 &kp Q      &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
-                &kp A 	   &kp S      &kp D       &kp F          &kp G         &kp H            &kp J          &kp K 	   &kp L      &mt LC(BKSP) BKSP 
+                &kp A 	   &kp S      &kp D       &kp F          &kp G         &kp H            &kp J          &kp K 	   &kp L      &kp BKSP 
                 &kp Z      &kp X      &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &mo NUMSYM_L
                                                   &kp LCTRL      &kp SPACE     &kp RSHIFT       &kp RALT
             >;
