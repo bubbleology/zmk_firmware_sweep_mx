@@ -116,6 +116,13 @@
 	    quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+	    
+	    delete: mod_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOD_DELETE";
+            #binding-cells = <0>;
+            bindings = <&kp T>, <&kp DEL>;
+            mods = <(MOD_LALT)>;
         };
     };
 
