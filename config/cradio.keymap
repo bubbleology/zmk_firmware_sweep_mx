@@ -128,7 +128,7 @@
 	.----------------------------------------------------------------------.
 	|Q DEL|  W  |  E  |  R  |  T  |          |  Y  |  U  |  I  |  O  |  P  |
 	|  A  |  S  |  D  |  F  |  G  |          |  H  |  J  |  K  |  L  |BKSPC|
-	|  Z  |  X  |  C  |  V  |  B  |          |  N  |  M  |  ,  |  .  |MO_1 |
+	|ZSHFT|  X  |  C  |  V  |  B  |          |  N  |  M  |  ,  |  .  |MO_1 |
 	'-----------------\ CTRL| SPC |          | SFT | RALT/-----------------'
 	                   '--------------------------------'
 */
@@ -140,7 +140,7 @@
             bindings = <
                 &mt DEL Q  &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
                 &kp A 	   &kp S      &kp D       &kp F          &kp G         &kp H            &kp J          &kp K 	   &kp L      &kp BKSP 
-                &kp Z      &kp X      &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &mo NUMSYM_L
+                &mt LSHIFT Z &kp X    &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &mo NUMSYM_L
                                                   &kp LCTRL      &kp SPACE     &kp RSHIFT       &kp RALT
             >;
         };	
