@@ -156,7 +156,7 @@
 
 /* 1 = Numbers and Symbols
 	.----------------------------------------------------------------------.
-	|  1  |  2  |  3  |  4  |  5  |          |  6  |  7  |  8  |  9  |  0  |
+	| 1 F1|2 F2 |3 F3 |4 F4 |5 F5 |          |  6  |  7  |  8  |  9  |  0  |
 	| TAB |  _  |  -  |  =  |  +  |          | [ ] |  @  | ' " |     | DEL |
 	| LGUI|  !  |  ?  | ; : |     |          | { } |  /  |  |  |  \  |     |
 	'-----------------\ LALT| SFT |          |TO_2 |     /-----------------'
@@ -165,7 +165,7 @@
         numsym_layer {
             label = "NumSym";
             bindings = <
-                &kp N1     &kp N2     &kp N3      &kp N4          &kp N5        &kp N6           &kp N7         &kp N8        &kp N9     &kp N0
+                &mt F1 N1  &mt F2 N2  &mt F3 N3   &mt F4 N4       &mt F5 N5     &kp N6           &kp N7         &kp N8        &kp N9     &kp N0
                 &kp TAB    &kp UNDER  &kp MINUS   &kp EQL         &kp LS(EQUAL) &mt RBKT LBKT    &kp AT         &mt DQT SQT   &none      &kp DEL
                 &kp LGUI   &kp EXCL   &kp QMARK   &mt COLON SEMI  &none         &mt RBRC LBRC    &kp FSLH       &kp PIPE      &kp BSLH   &trans
                                                   &kp LALT        &kp LSHIFT    &to NAV_L        &trans
@@ -176,19 +176,19 @@
 
 /* 2 = Navigation
 	.----------------------------------------------------------------------.
-	| F1  | F2  | F3  | F4  | F5  |          |PGUP | ← ← |  ↑  | → → | DEL |
-	| F6  | F7  | F8  | F9  | F10 |          |PGDN |  ←  |  ↓  |  →  |BKSPC|
-	| SFT |BKSPC| DEL | F11 | F12 |          |HOME |     |     |     |TO_0 |
-	'-----------------\     | SFT |          |TO_0 |TO_3 /-----------------'
+	| ESC |  O  |  F  |  P  | DEL |          |PGUP | ← ← |  ↑  | → → | DEL |
+	| TAB |  S  |  D  |  L  |BKSPC|          |PGDN |  ←  |  ↓  |  →  |BKSPC|
+	| SFT |TO_0 |  C  |  V  |     |          |HOME |     |     |     |TO_0 |
+	'-----------------\ CTRL| SPC |          |TO_0 |TO_3 /-----------------'
 	                   '--------------------------------'
 */
         nav_layer {
             label = "Nav";
             bindings = <
-                &kp F1 	   &kp F2    &kp F3      &kp F4          &kp F5       &kp PG_UP        &kp LC(LEFT)   &kp UP       &kp LC(RIGHT) &kp DEL 
-                &kp F6     &kp F7    &kp F8      &kp F9          &kp F10      &kp PG_DN        &kp LEFT       &kp DOWN     &kp RIGHT     &mt LC(BKSP) BKSP 
-                &kp LSHIFT &kp DEL   &kp BKSP    &kp F11         &kp F12      &kp HOME         &none          &none        &none         &to DEFAULT_L
-                                                 &trans          &kp LSHIFT   &to DEFAULT_L    &to BLE_L 
+                &kp ESC	   &kp O	&kp F       &kp P	  &kp DEL     &kp PG_UP        &kp LC(LEFT)   &kp UP       &kp LC(RIGHT) &kp DEL 
+                &kp DEL    &kp S	&kp D	    &kp L	  &kp BKSP    &kp PG_DN        &kp LEFT       &kp DOWN     &kp RIGHT     &mt LC(BKSP) BKSP 
+                &kp LSHIFT &to DEFAULT_L &kp BKSP   &none         &none       &kp HOME         &none          &none        &none         &to DEFAULT_L
+                                                    &kp LCTRL     &kp SPACET  &to DEFAULT_L    &to BLE_L 
             >;
         };
 	
@@ -245,7 +245,7 @@
 	'-----------------\ CTRL| SPC |          |  0  |  .  /-----------------'
 	                   '--------------------------------'
 */
-	work_layer {
+/*	work_layer {
             label = "WORK";
             bindings = <
                 &kp ESC	   &kp O	&kp F       &kp P	  &kp DEL   	&kp KP_MULTIPLY &kp N7    &kp N8      &kp N9     &kp KP_DIVIDE 
@@ -257,6 +257,6 @@
 
     };
 };
-
+*/
 // ===========================================================================================================
 
