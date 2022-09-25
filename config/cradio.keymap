@@ -176,8 +176,8 @@
 
 /* 2 = Navigation
 	.----------------------------------------------------------------------.
-	| ESC |  O  |  F  |  P  | DEL |          |PGUP | ← ← |  ↑  | → → | DEL |
-	| DEL |  S  |  D  |  L  |BKSPC|          |PGDN |  ←  |  ↓  |  →  |BKSPC|
+	| ESC |  O  |  E  |  R  |  P  |          |PGUP | ← ← |  ↑  | → → | DEL |
+	| DEL |  S  |  D  |  F  |  L  |          |PGDN |  ←  |  ↓  |  →  |BKSPC|
 	| SFT |  X  |  C  |  V  |TO_0 |          |HOME |     |     |     |TO_0 |
 	'-----------------\ CTRL| SPC |          |TO_0 |TO_3 /-----------------'
 	                   '--------------------------------'
@@ -185,8 +185,8 @@
         nav_layer {
             label = "Nav";
             bindings = <
-                &kp ESC	   &kp O	&kp F       &kp P	  &kp DEL     &kp PG_UP        &kp LC(LEFT)   &kp UP       &kp LC(RIGHT) &kp DEL 
-                &kp DEL    &kp S	&kp D	    &kp L	  &kp BKSP    &kp PG_DN        &kp LEFT       &kp DOWN     &kp RIGHT     &mt LC(BKSP) BKSP 
+                &kp ESC	   &kp O	&kp E       &kp R	  &kp P       &kp PG_UP        &kp LC(LEFT)   &kp UP       &kp LC(RIGHT) &kp DEL 
+                &kp DEL    &kp S	&kp D	    &kp F	  &kp L	      &kp PG_DN        &kp LEFT       &kp DOWN     &kp RIGHT     &mt LC(BKSP) BKSP 
                 &kp LSHIFT &kp X        &kp C       &kp V         &to DEFAULT_L &kp HOME       &none          &none        &none         &to DEFAULT_L
                                                     &kp LCTRL     &kp SPACE   &to DEFAULT_L    &to BLE_L 
             >;
