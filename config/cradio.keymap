@@ -14,6 +14,7 @@
 #define NAV_L 		2
 #define BLE_L 		3
 #define COMFY_L		4
+#define WORK_L		5
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -235,4 +236,3 @@
 };
 
 // ===========================================================================================================
-
