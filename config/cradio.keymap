@@ -14,7 +14,7 @@
 #define NAV_L 		2
 #define BLE_L 		3
 #define COMFY_L		4
-#define ADD_L		5
+#define WORK_L		5
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -31,21 +31,16 @@
 	|  20 |  21 |  22 |  23 |  24 |          |  25 |  26 |  27 |  28 |  29 |
 	'-----------------\  30 |  31 |          |  32 |  33 /-----------------'
 	                   '--------------------------------'
-	// All Layers		
+			
 	ESC 	= 0 | 1			LC(X)	= 7 | 8
 	TAB 	= 11 | 12		LC(C)	= 17 | 18
 					LC(V)	= 27 | 28
 	ENTER 	= 12 | 13		SK(SFT) = 16 | 17
 	LPAR 	= 13 | 14		RPAR 	= 15 | 16
+	TO_2	= 20 | 21
 	TO_4	= 21 | 22
-	TO_0	= 22 | 23
-	TO_5	= 23 | 24
+	TO_0	= 22 | 23 
 	TO_3	= 20 | 21 | 22		TO_3	= 27 | 28 | 29
-	
-	// Layer 5 exclusive
-	0	= 1 | 2
-	.	= 2 | 3
-	
 */
 
 / {
@@ -111,24 +106,10 @@
 			bindings = <&to BLE_L>;
 		};
 		
-		combo_addition {
+		combo_nav {
 			timeout-ms = <40>;
 			key-positions = <20 21>;
-			bindings = <&to ADD_L>;
-		};
-		
-		combo_addzero {
-			timeout-ms = <40>;
-			key-positions = <1 2>;
-			layers = <5>;
-			bindings = <&kp N0>;
-		};
-		
-		combo_adddot {
-			timeout-ms = <40>;
-			key-positions = <2 3>;
-			layers = <5>;
-			bindings = <&kp DOT>;
+			bindings = <&to NAV_L>;
 		};
 	    };
 	    
@@ -166,7 +147,7 @@
             bindings = <
                 &mt DEL Q  &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
                 &kp A 	   &kp S      &kp D       &kp F          &kp G         &kp H            &kp J          &kp K 	   &kp L      &kp BKSP 
-                &kp Z      &kp X    &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &mo NUMSYM_L
+                &kp Z      &kp X      &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &mo NUMSYM_L
                                                   &kp LCTRL      &kp SPACE     &kp RSHIFT       &kp RALT
             >;
         };	
@@ -197,17 +178,17 @@
 	.----------------------------------------------------------------------.
 	| ESC |  O  |  E  |  R  |  P  |          |PGUP | ← ← |  ↑  | → → | DEL |
 	| DEL |  S  |  D  |  F  |  L  |          |PGDN |  ←  |  ↓  |  →  |BKSPC|
-	| SFT |  X  |  C  |  V  |TO_5 |          |HOME |     |     |     |TO_0 |
+	| SFT |  X  |  C  |  V  |TO_0 |          |HOME |     |     |     |TO_0 |
 	'-----------------\ CTRL| SPC |          |TO_0 |TO_3 /-----------------'
 	                   '--------------------------------'
 */
         nav_layer {
             label = "Nav";
             bindings = <
-                &kp ESC	   &kp O	&kp E       &kp R	  &kp P       &kp PG_UP     &kp LC(LEFT)   &kp UP       &kp LC(RIGHT) &kp DEL 
-                &kp DEL    &kp S	&kp D	    &kp F	  &kp L	      &kp PG_DN     &kp LEFT       &kp DOWN     &kp RIGHT     &mt LC(BKSP) BKSP 
-                &kp LSHIFT &kp X        &kp C       &kp V         &to ADD_L   &kp HOME      &none          &none        &none         &to DEFAULT_L
-                                                    &kp LCTRL     &kp SPACE   &to DEFAULT_L &to BLE_L 
+                &kp ESC	   &kp O	&kp E       &kp R	  &kp P       &kp PG_UP        &kp LC(LEFT)   &kp UP       &kp LC(RIGHT) &kp DEL 
+                &kp DEL    &kp S	&kp D	    &kp F	  &kp L	      &kp PG_DN        &kp LEFT       &kp DOWN     &kp RIGHT     &mt LC(BKSP) BKSP 
+                &kp LSHIFT &kp X        &kp C       &kp V         &to DEFAULT_L &kp HOME       &none          &none        &none         &to DEFAULT_L
+                                                    &kp LCTRL     &kp SPACE   &to DEFAULT_L    &to BLE_L 
             >;
         };
 	
@@ -236,38 +217,18 @@
 /* 4 = Comfort
 	.----------------------------------------------------------------------.
 	| TIL | ← ← |  ↑  | → → |  ^  |     	 |  *  |  7  |  8  |  9  |  /  |
-	| TAB |  ←  |  ↓  |  →  |  <  |     	 |  -  |  4  |  5  |  6  |BKSPC|
-	| SFT | DEL |BKSPC|     |  >  |          |  +  |  1  |  2  |  3  |TO_0 |
-	'-----------------\ TO_2| SPC |          |  0  |  .  /-----------------'
+	| DEL |  ←  |  ↓  |  →  |  <  |     	 |  +  |  4  |  5  |  6  |BKSPC|
+	| SFT | DEL |BKSPC|     |  >  |          |  -  |  1  |  2  |  3  |TO_0 |
+	'-----------------\ CTRL| SPC |          |  0  |  .  /-----------------'
 	                   '--------------------------------'
 */
 	comfy_layer {
             label = "COMFY";
             bindings = <
-                &kp TILDE  &kp LC(LEFT) &kp UP      &kp LC(RIGHT) &kp CARET   	&kp KP_MULTIPLY  &kp N7     &kp N8      &kp N9     &kp KP_DIVIDE 
-                &kp DEL    &kp LEFT     &kp DOWN    &kp RIGHT     &kp LESS_THAN &kp KP_MINUS     &kp N4    &kp N5      &kp N6     &kp BKSP
-                &kp LSHIFT &kp DEL      &kp BKSP    &none         &kp GREATER_THAN &kp KP_PLUS   &kp N1    &kp N2      &kp N3     &to DEFAULT_L  
-                                                    &to NAV_L     &kp SPACE    	&kp N0       &kp DOT
-            >;
-        };
-
-// -----------------------------------------------------------------------------
-
-/* 5 = Addition
-	.----------------------------------------------------------------------.
-	| ESC |  7  |  8  |  9  |TO_4 |     	 |  *  |  7  |  8  |  9  |  /  |
-	| DEL*|  4  |  5  |  6  | + - |     	 |  -  |  4  |  5  |  6  |BKSPC|
-	| SFT |  1  |  2  |  3  |  .  |          |  +  |  1  |  2  |  3  |TO_0 |
-	'-----------------\ TO_2| SPC |          |  0  |  .  /-----------------'
-	                   '--------------------------------'
-*/
-	comfy_addition {
-            label = "ADD";
-            bindings = <
-                &kp ESC      &kp N7   &kp N8     &kp N9      &to COMFY_L          &kp KP_MULTIPLY &kp N7    &kp N8      &kp N9     &kp KP_DIVIDE 
-                &mt DEL BKSP &kp N4   &kp N5     &kp N6      &kp KP_MINUS KP_PLUS &kp KP_PLUS     &kp N4    &kp N5      &kp N6     &kp BKSP
-                &kp LSHIFT   &kp N1   &kp N2     &kp N3      &kp DOT              &kp KP_MINUS    &kp N1    &kp N2      &kp N3     &to DEFAULT_L  
-                                                 &to NAV_L   &kp SPACE            &kp N0          &kp DOT
+                &kp TILDE  &kp LC(LEFT) &kp UP      &kp LC(RIGHT) &kp CARET   	&kp KP_MULTIPLY &kp N7    &kp N8      &kp N9     &kp KP_DIVIDE 
+                &kp DEL    &kp LEFT     &kp DOWN    &kp RIGHT     &kp LESS_THAN &kp KP_PLUS     &kp N4    &kp N5      &kp N6     &kp BKSP
+                &kp LSHIFT &kp DEL      &kp BKSP    &none         &kp GREATER_THAN &kp KP_MINUS &kp N1    &kp N2      &kp N3     &to DEFAULT_L  
+                                                    &kp LCTRL     &kp SPACE    	&kp N0       &kp DOT
             >;
         };
 
