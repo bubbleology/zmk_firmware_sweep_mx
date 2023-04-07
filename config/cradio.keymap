@@ -159,7 +159,7 @@
 	| 1 F1|2 F2 |3 F3 |4 F4 |5 F5 |          |  6  |  7  |  8  |  9  |  0  |
 	| TAB |  _  |  -  |  =  |  +  |          | [ ] |  @  | ' " |  "  | DEL |
 	| LGUI|  !  |  ?  | ; : |  :  |          | { } |  /  |  |  |  \  |     |
-	'-----------------\ LALT| SFT |          |TO_2 |     /-----------------'
+	'-----------------\ LALT| SGUI|          |TO_2 |     /-----------------'
 	                   '--------------------------------'
 */
         numsym_layer {
@@ -168,7 +168,7 @@
                 &mt F1 N1  &mt F2 N2  &mt F3 N3   &mt F4 N4       &mt F5 N5     &kp N6           &kp N7         &kp N8        &kp N9     &kp N0
                 &kp TAB    &kp UNDER  &kp MINUS   &kp EQL         &kp LS(EQUAL) &mt RBKT LBKT    &kp AT         &mt DQT SQT   &kp DQT    &kp DEL
                 &kp LGUI   &kp EXCL   &kp QMARK   &mt COLON SEMI  &kp COLON     &mt RBRC LBRC    &kp FSLH       &kp PIPE      &kp BSLH   &trans
-                                                  &kp LALT        &kp LSHIFT    &to NAV_L        &trans
+                                                  &kp LALT        &sk LGUI	&to NAV_L        &trans
             >;
         };
 
