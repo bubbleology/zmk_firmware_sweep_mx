@@ -168,7 +168,7 @@
                 &mt F1 N1  &mt F2 N2  &mt F3 N3   &mt F4 N4       &mt F5 N5     &kp N6           &kp N7         &kp N8        &kp N9     &kp N0
                 &kp TAB    &kp UNDER  &kp MINUS   &kp EQL         &kp LS(EQUAL) &mt RBKT LBKT    &kp AT         &mt DQT SQT   &kp DQT    &kp DEL
                 &kp LGUI   &kp EXCL   &kp QMARK   &mt COLON SEMI  &kp COLON     &mt RBRC LBRC    &kp FSLH       &kp PIPE      &kp BSLH   &trans
-                                                  &kp LALT        &sk LWIN	&to NAV_L        &trans
+                                                  &kp LALT        &kp RSHIFT	&to NAV_L        &trans
             >;
         };
 
